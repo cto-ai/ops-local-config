@@ -1,0 +1,22 @@
+{
+  "name": "@cto.ai/ops-ctrl-account",
+  "version": "1.0.0",
+  "description": "cto.ai library for managing local configuration settings",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tap --100 test/*.test.js",
+    "cov": "cov",
+    "lint": "standard",
+    "check": "npm test && npm run lint"
+  },
+  "author": "David Mark Clements <dave@cto.ai>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "tapx": "0.0.3"
+  }
+}
