@@ -24,9 +24,10 @@ Serialize and write a configuration object to the `config.json` file.
 
 Removes the `config.json` file. 
 
-## Engine
+## Engines
 
-* Node 12.4 and up.
+* Node 12.4+
+* Node 14.0+
 
 ## Development
 
