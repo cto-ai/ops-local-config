@@ -2,7 +2,6 @@ name: Check
 on: push
 jobs:
   check:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         os:
