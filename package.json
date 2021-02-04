@@ -1,5 +1,5 @@
 {
-  "name": "@cto.ai/ops-ctrl-account",
+  "name": "@cto.ai/ops-local-config",
   "version": "1.0.0",
   "description": "cto.ai library for managing local configuration settings",
   "main": "index.js",
