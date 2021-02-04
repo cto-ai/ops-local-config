@@ -1,8 +1,5 @@
 name: Check
-on: 
-  push:
-    tags:
-      - !**
+on: push
 jobs:
   check:
     runs-on: ubuntu-latest
