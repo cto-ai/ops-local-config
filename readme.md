@@ -57,6 +57,22 @@ Autoformat:
 npm run lint -- --fix
 ```
 
+## Releasing
+
+For mainline releases:
+
+```sh
+npm version <major|minor|patch>
+git push --follow-tags
+```
+
+For prereleases:
+
+```sh
+npm version prerelease
+git push --follow-tags
+```
+
 ### License
 
 MIT
