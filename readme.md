@@ -6,6 +6,8 @@ Creates, writes, reads and removes a `config.json` file from a specified directo
 
 ## API
 
+This is a native ESM module.
+
 ### `localConfig(opts) => instance`
 
 *Options:*
