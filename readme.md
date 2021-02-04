@@ -24,7 +24,7 @@ Serialize and write a configuration object to the `config.json` file.
 
 ### `instance.clear() => Promise => undefined`
 
-Removes the `config.json` file. 
+Removes the `config.json` file.
 
 ## Engines
 
