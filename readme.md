@@ -16,7 +16,7 @@ This is a native ESM module.
 
 ### `instance.read() => Promise => config`
 
-Read and parse contents of the `config.json` file into an object. 
+Read and parse contents of the `config.json` file into an object.
 
 ### `instance.write(config)  => Promise => config`
 
