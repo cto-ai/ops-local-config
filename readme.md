@@ -10,9 +10,9 @@ This is a native ESM module.
 
 ### `localConfig(opts) => instance`
 
-*Options:*
+**Options:**
 
-* `dir` - the configuration directory to store a `config.json` file in
+* `dir` (`string`) *Required* - the configuration directory to store a `config.json` file in
 
 ### `instance.read() => Promise => config`
 
