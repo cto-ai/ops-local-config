@@ -66,6 +66,16 @@ test('read returns empty config object for any error', async ({ same }) => {
   same(await freshConfig.read(), {})
 })
 
+test('read restores buffers from JSON {type: "Buffer", data: [...]} objects', async ({ same }) => {
+  const dir = await mkdtemp(join(tmpdir(), '-ops-local-config'))
+  const data = { user: { username: 'test', email: Buffer.from('test@test.com'), id: '123', x: null } }
+  const config = localConfig({ dir })
+  await config.write(data)
+  same(await config.read(), data)
+  const freshConfig = localConfig({ dir })
+  same(await freshConfig.read(), data)
+})
+
 test('clear removes {dir}/config.json', async ({ same, rejects }) => {
   const dir = await mkdtemp(join(tmpdir(), '-ops-local-config'))
   const config = localConfig({ dir })

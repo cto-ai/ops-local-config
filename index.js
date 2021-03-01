@@ -21,7 +21,14 @@ export default function localConfig ({ dir, name = 'config' } = {}) {
     debug('reading config')
     try {
       if (cached) return cached
-      const config = JSON.parse(await readFile(configPath))
+      const config = JSON.parse(await readFile(configPath), (k, v) => {
+        if (v === null) return v
+        const { type, data } = v
+        if (type === 'Buffer' && Array.isArray(data)) {
+          return Buffer.from(data)
+        }
+        return v
+      })
       cached = config
       return config
     } catch (err) {
