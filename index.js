@@ -6,14 +6,14 @@ const debug = createDebug('ops:local-config')
 
 export const DIR_ERR = '@cto.ai/ops-local-config the `dir` option must be an absolute path string'
 
-export default function localConfig ({ dir } = {}) {
+export default function localConfig ({ dir, name = 'config' } = {}) {
   try {
     if (isAbsolute(dir) === false) throw Error(DIR_ERR)
   } catch {
     throw Error(DIR_ERR)
   }
 
-  const configPath = join(dir, 'config.json')
+  const configPath = join(dir, `${name}.json`)
 
   let cached = null
 

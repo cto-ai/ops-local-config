@@ -13,6 +13,8 @@ This is a native ESM module.
 **Options:**
 
 * `dir` (`string`) *Required* - the configuration directory to store a `config.json` file in
+* `name` (`string`) *Optional* - an alternative name for `config.json` (without the extension)
+
 
 ### `instance.read() => Promise => config`
 
